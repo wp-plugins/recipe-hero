@@ -99,12 +99,23 @@ class Recipe_Hero_Admin_Settings {
                 ),
                 array(
                     'name' => __( 'Class for Main Content', 'recipe-hero' ),
-                    'desc' => __( 'The wrapper class for the content area.', 'recipe-hero' ),
+                    'desc' => __( 'The wrapper class for the content area. This is needed if your theme only applies styles inside of this class.', 'recipe-hero' ),
                     'id'   => 'rh-content-class',
                     'type' => 'text_small',
                     'attributes' => array(
                             'placeholder' => 'eg. site-content',
                         ),
+                ),
+                array(
+                    'name'    => __( 'Sidebar Settings', 'recipe-hero' ),
+                    'desc'    => __( 'Do you want to display your theme\'s sidebar or make it Full Width? This will affect all Recipe-related pages/posts. Full Width view is experimental at the moment.', 'recipe-hero' ),
+                    'id'      => 'rh-sidebar-settings',
+                    'type'    => 'select',
+                    'default' => 'sidebar',
+                    'options' => array(
+                        'sidebar' => __( 'Sidebar', 'recipe-hero' ),
+                        'fullwidth' => __( 'Full Width', 'recipe-hero' ),
+                    ),
                 ),
                 array(
                     'name' => '<h3>' . __( 'Custom Text', 'recipe-hero' ) . '</h2>',
@@ -147,11 +158,10 @@ class Recipe_Hero_Admin_Settings {
                     'type' => 'html',
                 ),
                 array(
-                    'name' => __( 'Disable Recipe Hero Styles', 'recipe-hero' ),
-                    'desc' => __( 'Selecting this will stop the plugin loading the default styles used in Recipe Hero for layout and styling.', 'recipe-hero' ),
-                    'id'   => 'rh-disable-styles',
-                    'type' => 'checkbox',
-                    'default' => 0,
+                    'name'    => __( 'Disable Recipe Hero Styles', 'recipe-hero' ),
+                    'desc'    => __( 'Selecting this will stop the plugin loading the default styles used in Recipe Hero for layout and styling.', 'recipe-hero' ),
+                    'id'      => 'rh-disable-styles',
+                    'type'    => 'checkbox',
                 ),
                 array(
                     'name' => __( 'Disable Lightbox', 'recipe-hero' ),
