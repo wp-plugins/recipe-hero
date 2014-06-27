@@ -4,7 +4,7 @@ Donate link: http://recipehero.in/
 Tags: recipe, recipes, cooking, ingredients, food, cook, recipe hero, captain theme
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 0.6.5
+Stable tag: 0.6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,6 +90,14 @@ Sure, but on food-steroids.
 5. Example of a Recipe #2
 
 == Changelog ==
+
+= 0.6.6 =
+* Style Fix for Twenty Fourteen Theme
+
+= 0.6.5 =
+* Major Styling Improvements
+* Layout Improvements
+* Sidebar / Full Width Layout Option
 
 = 0.6.0 =
 * Various Improvements
