@@ -78,7 +78,7 @@ class Recipe_Hero_Admin_Settings {
 
     /**
      * Defines the theme option metabox and field configuration
-     * @since  0.7.0
+     * @since  0.7.1
      * @return array
      */
     public static function option_fields() {
@@ -98,7 +98,7 @@ class Recipe_Hero_Admin_Settings {
                     'type' => 'html',
                 ),
                 array(
-                    'name'    => __( 'Recipes Page / Home', 'recipe-hero' ),
+                    'name'    => __( 'Recipes Page', 'recipe-hero' ),
                     'desc'    => __( 'The page you select here will be the home of all your recipes. Additionally, the \'Recipe Archive\' of your site can be found at: ', 'recipe-hero' ) . site_url('/recipes/'),
                     'id'      => 'rh-recipe-page-display',
                     'type'    => 'select',
@@ -124,26 +124,9 @@ class Recipe_Hero_Admin_Settings {
                         ),
                 ),
                 array(
-                    'name'    => __( 'Sidebar Settings', 'recipe-hero' ),
-                    'desc'    => __( 'Do you want to display your theme\'s sidebar or make it Full Width? This will affect all Recipe-related pages/posts. Full Width view is experimental at the moment.', 'recipe-hero' ),
-                    'id'      => 'rh-sidebar-settings',
-                    'type'    => 'select',
-                    'default' => 'sidebar',
-                    'options' => array(
-                        'sidebar' => __( 'Sidebar', 'recipe-hero' ),
-                        'fullwidth' => __( 'Full Width', 'recipe-hero' ),
-                    ),
-                ),
-                array(
                     'name' => '<h3>' . __( 'Styling', 'recipe-hero' ) . '</h2>',
                     'id'   => 'rh-styling-title',
                     'type' => 'html',
-                ),
-                array(
-                    'name'    => __( 'Disable Recipe Hero Styles', 'recipe-hero' ),
-                    'desc'    => __( 'Selecting this will stop the plugin loading the default styles used in Recipe Hero for layout and styling.', 'recipe-hero' ),
-                    'id'      => 'rh-disable-styles',
-                    'type'    => 'checkbox',
                 ),
                 array(
                     'name' => __( 'Disable Lightbox', 'recipe-hero' ),
@@ -151,14 +134,29 @@ class Recipe_Hero_Admin_Settings {
                     'id'   => 'rh-disable-lightbox',
                     'type' => 'checkbox',
                 ),
-                 array(
+                array(
+                    'name' => __( 'Recipe Width (px)', 'recipe-hero' ),
+                    'desc' => __( 'The width of the recipe. This can also be a %, like 90%.', 'recipe-hero' ),
+                    'id'   => 'rh-styling-option-width',
+                    'type' => 'text_small',
+                    'attributes' => array(
+                        'placeholder' => 'eg. 600px or 85%',
+                        ),
+                ),
+                array(
                     'name' => __( 'Recipe Padding (px)', 'recipe-hero' ),
                     'desc' => __( 'Sometimes you may want to add some padding around the recipe articles. Normally from 0-25px is enough.', 'recipe-hero' ),
                     'id'   => 'rh-styling-option-padding',
                     'type' => 'text_small',
                     'attributes' => array(
-                        'placeholder' => 'eg. 15px',
+                        'placeholder' => 'eg. 15px or 10px 25px 5px',
                         ),
+                ),
+                array(
+                    'name' => __( 'Center Recipe Container', 'recipe-hero' ),
+                    'desc' => __( 'Selecting this will center the recipe in the middle of its container (experimental).', 'recipe-hero' ),
+                    'id'   => 'rh-styling-option-center',
+                    'type' => 'checkbox',
                 ),
                 array(
                     'name' => '<h3>' . __( 'Custom Text', 'recipe-hero' ) . '</h2>',
