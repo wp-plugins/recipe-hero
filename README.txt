@@ -16,9 +16,8 @@ It shouldn't be difficult to add a recipe to your WordPress site.
 
 Recipe Hero adds a new custom post type, **recipe**, to your website. Adding a recipe is just like adding a post. You can add everything from the recipe's yield to the equipment needed, the cooking time to the ingredients - everything will be automatically formatted for Google Rich Snippets.
 
-**Support / Docs @ [Recipe Hero HQ](http://recipehero.in/)**
-
-**[Recipe Hero Demo](http://try.recipehero.in/)**
+* **Support / Docs @ [Recipe Hero HQ](http://recipehero.in/)**
+* **Want to try it out?** [Recipe Hero Demo](http://try.recipehero.in/)
 
 Navigate to `http://yourwebsite.com/recipes` to see all the new recipes you've added. You can easily customise the CSS to your liking and make it look perfect. It's automatically set-up to be responsive, clean & beautiful.
 
