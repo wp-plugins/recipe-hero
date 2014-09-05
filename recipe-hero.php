@@ -49,6 +49,7 @@ $rh_style_options = get_option( 'recipe_hero_style_options' );
 $rh_labels_options = get_option( 'recipe_hero_labels_options' );
 $rh_other_options = get_option( 'recipe_hero_other_options' );
 
+
 /*----------------------------------------------------------------------------*
  * Public-Facing Functionality
  *----------------------------------------------------------------------------*/
