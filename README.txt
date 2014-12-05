@@ -2,9 +2,9 @@
 Contributors: captaintheme, recipehero,
 Donate link: http://recipehero.in/
 Tags: recipe, recipes, cooking, ingredients, food, cook, cook book, recipe hero, captain theme, google recipes
-Requires at least: 3.5.1
-Tested up to: 4.0.0
-Stable tag: 0.9.0
+Requires at least: 3.8.0
+Tested up to: 4.1.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,8 +34,8 @@ Navigate to `http://yourwebsite.com/recipes` to see all the new recipes you've a
 * Can Extend / Develop with custom actions, etc.
 * Completely Open Source GPL Project - see [GitHub](https://github.com/bryceadams/Recipe-Hero) to contribute!
 * Translation-Ready (includes .pot file etc.)
-* Documentation (coming soon!)
-* Supported
+* Documentation
+* Lovingly Supported
 
 **Contributing:** Why not help out? This project is being actively developed [on GitHub](https://github.com/bryceadams/Recipe-Hero/). Feel free to report issues, help others and make pull requests!
 
@@ -121,6 +121,28 @@ Sure, but on food-steroids. Just check out the screenshots area.
 7. Recipe Hero Settings #3
 
 == Changelog ==
+
+= 1.0.0 =
+* New: Refactored entire core plugin structure / code
+* New: Recipe Gallery
+* New: Custom Ordering (sorting and in option)
+* New: Settings redone - extendable / simpler
+* New: 'Custom Labels' moved to free Recipe Hero Labels extension (http://wordpress.org/plugins/recipe-hero-labels)
+* New: Updated CMB framework
+* New: Lightbox for shortcodes
+* New: More image sizes / options
+* New: Recipe Template file updates
+* New: Pagination
+* New: No Recipes Found template file
+* New: Only use /recipes/ for archive when no Recipe Page has been set (one or the other - highly requested and better for SEO too)
+* New: Custom Permalinks Base
+* New: Custom Cuisine / Course Slugs
+* i18n: Translation Files fixed / standardised
+* Bug Fix: If time <1 hour, don't show 0h
+* Bug Fix: Ingredient Plurals (and translations)
+* Bug Fix: Hide ingredients title if no ingredients
+* Bug Fix: Remove [recipe] shortcode from Jetpack (when active)
+* Bug Fix: Remove 'save permalinks' notice and just rewrite / flush rules
 
 = 0.9.0 =
 * New: Autocomplete Ingredients when adding in Edit screen

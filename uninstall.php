@@ -7,20 +7,24 @@
  * @license   GPL-2.0+
  * @link      http://captaintheme.com
  * @copyright 2014 Captain Theme
+ * @since 	  1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-$other_options = get_option( 'recipe_hero_other_options' );
+$options = array(
+	'recipe_hero_recipes_page_id',
+	'recipe_hero_recipe_order',
+	'recipe_single_image_size',
+	'recipe_steps_image_size',
+	'recipe_thumbnail_image_size',
+	'recipe_hero_enable_lightbox',
+);
 
-if ( isset ( $other_options['delete_options'] ) ) {
-
-	// Delete Recipe Hero Options
-	delete_option( 'recipe_hero_general_options' );
-	delete_option( 'recipe_hero_style_options' );
-	delete_option( 'recipe_hero_labels_options' );
-	delete_option( 'recipe_hero_other_options' );
-
+foreach ( $options as $option ) {
+	if ( get_option( $option ) ) {
+		delete_option( $option );
+	}
 }
