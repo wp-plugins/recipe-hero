@@ -4,20 +4,21 @@
  *
  * @package   Recipe Hero
  * @author    Captain Theme <info@captaintheme.com>
- * @version 	  0.8.0
+ * @version   1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Variables
 global $post;
-global $rh_labels_options;
 
 $serves 		= get_post_meta( $post->ID, '_recipe_hero_detail_serves', true );
 $serves_type 	= get_post_meta( $post->ID, '_recipe_hero_detail_serves_type', true );
 $equipment 		= get_post_meta ( $post->ID, '_recipe_hero_detail_equipment', false );
-$prep_time 		= recipe_hero_convert_minute_hour ( get_post_meta ( $post->ID, '_recipe_hero_detail_prep_time', true ) );
-$cook_time 		= recipe_hero_convert_minute_hour ( get_post_meta ( $post->ID, '_recipe_hero_detail_cook_time', true ) );
+
+$format 		= _x( '%dh %02dm', 'Abbreviations for time: Replace only h (hour) & m (minute) with appropriate appreviation', 'recipe-hero' );
+$prep_time 		= recipe_hero_convert_minute_hour ( get_post_meta ( $post->ID, '_recipe_hero_detail_prep_time', true ), $format );
+$cook_time 		= recipe_hero_convert_minute_hour ( get_post_meta ( $post->ID, '_recipe_hero_detail_cook_time', true ), $format );
 $total_time 	= recipe_hero_convert_minute_hour ( recipe_hero_calc_total_cook_time() ); ?>
 
 <div class="recipe-single-details">
