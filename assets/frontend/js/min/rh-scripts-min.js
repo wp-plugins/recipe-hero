@@ -1,0 +1,1 @@
+!function($){"use strict";$(".ingredient-checkbox").click(function(){var t=$(this);t.is(":checked")?$(this).nextAll("div").css("text-decoration","line-through"):$(this).nextAll("div").css("text-decoration","none")})}(jQuery);
