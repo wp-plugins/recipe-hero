@@ -11,7 +11,7 @@
  * Plugin Name:       Recipe Hero
  * Plugin URI:        http://recipehero.in/
  * Description:       The last recipe plugin you'll ever need.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Bryce Adams
  * Author URI:        http://bryce.se/
  * Text Domain:       recipe-hero
@@ -36,7 +36,7 @@ if ( ! class_exists( 'RecipeHero' ) ) :
  * Main RecipeHero Class
  *
  * @class RecipeHero
- * @version	1.0.1
+ * @version	1.0.2
  */
 
 final class RecipeHero {
@@ -44,11 +44,11 @@ final class RecipeHero {
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
 	 *
-	 * @since   1.0.1
+	 * @since   1.0.2
 	 *
 	 * @var     string
 	 */
-	public static $version = '1.0.1';
+	public static $version = '1.0.2';
 
 	/**
 	 * The variable name is used as the text domain when internationalizing strings
@@ -116,7 +116,7 @@ final class RecipeHero {
 	 * Initialize the plugin by setting localization and loading public scripts
 	 * and styles.
 	 *
-	 * @since     0.9.0
+	 * @since     1.0.0
 	 */
 	public function __construct() {
 
@@ -181,6 +181,8 @@ final class RecipeHero {
 		include_once( 'includes/class-rh-post-types.php' );
 
 		include_once( 'includes/class-rh-settings-methods.php' );
+
+		include_once( 'includes/class-rh-comments.php' );
 
 		include_once( 'includes/rh-templates.php' );
 		include_once( 'includes/rh-templates-functions.php' );

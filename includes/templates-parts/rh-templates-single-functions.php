@@ -199,51 +199,48 @@ if ( ! function_exists( 'recipe_hero_output_single_nutrition' ) ) {
  *
  * @package   Recipe Hero
  * @author    Captain Theme <info@captaintheme.com>
- * @since 	  0.8.0
+ * @since 	  1.0.2
  */
 
-if ( ! function_exists( 'recipe_hero_output_single_comments' ) ) {
+if ( ! function_exists( 'recipe_hero_comments' ) ) {
 
-	function recipe_hero_output_single_comments() {
+	function recipe_hero_comments( $comment, $args, $depth ) {
 
-		recipe_hero_get_template( 'single/comments.php' );
+		$GLOBALS['comment'] = $comment;
+		recipe_hero_get_template( 'single/review.php', array( 'comment' => $comment, 'args' => $args, 'depth' => $depth ) );
 
 	}
 
 }
 
-/******************************/
-
-
 /**
- * Line Break
+ * Recipe Single Comments
  *
  * @package   Recipe Hero
  * @author    Captain Theme <info@captaintheme.com>
- * @since 	  0.8.0
+ * @since 	  1.0.2
  */
 
-if ( ! function_exists( 'recipe_hero_output_single_seperator' ) ) {
-
-	function recipe_hero_output_single_seperator() {
-
-		echo '<hr class="recipe-single-seperator" />';
-
-	}
-
+function recipe_hero_output_single_comments() {
+	echo comments_template();
 }
+
+/******************************/
 
 /**
  * Function to convert minutes to hours for prep/cook time
  *
  * @package   Recipe Hero
  * @author    Captain Theme <info@captaintheme.com>
- * @since 	  1.0.0
+ * @since 	  1.0.2
  */
 
 if ( ! function_exists( 'recipe_hero_convert_minute_hour' ) ) {
 
-	function recipe_hero_convert_minute_hour( $time, $format = '%dh %02dm' ) {
+	function recipe_hero_convert_minute_hour( $time ) {
+
+		$hours_postfix = _x( 'h', 'Abbreviation for hours', 'recipe-hero' );
+		$minutes_postfix = _x( 'm', 'Abbreviation for minutes', 'recipe-hero' );
 
 	    settype( $time, 'integer' );
 	    if ( $time < 1 ) {
@@ -253,9 +250,9 @@ if ( ! function_exists( 'recipe_hero_convert_minute_hour' ) ) {
 	    $minutes = $time % 60;
 	    
 	    if ( $time < 60 ) {
-	    	$content = $minutes . _x( 'm', 'Abbreviation for minutes', 'recipe-hero' );
+	    	$content = $minutes . $minutes_postfix;
 	    } else {
-	   		$content = sprintf( $format, $hours, $minutes );
+	   		$content = $hours . $hours_postfix . ' ' . $minutes . $minutes_postfix;
 	    }
 
 	    return $content;

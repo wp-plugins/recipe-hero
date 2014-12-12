@@ -64,8 +64,12 @@ class RH_Admin_Extensions {
 		?>
 		<div class="wrap recipe_hero recipe_hero_extensions_wrap">
 			<h2><?php _e( 'Recipe Hero Extensions', 'recipe-hero' ); ?></h2>
-			<div id="notice" class="updated below-h2"><p><?php printf( __( 'Buying multiple extensions? <a href="%s">Check out the core extension bundle &rarr;</a>', 'recipe-hero' ), 'https://recipehero.in/extensions/bundle/' ); ?></p></div>
-			<p></p>
+			<?php
+			/*
+				<div id="notice" class="updated below-h2"><p><?php printf( __( 'Buying multiple extensions? <a href="%s">Check out the core extension bundle &rarr;</a>', 'recipe-hero' ), 'https://recipehero.in/extensions/bundle/' ); ?></p></div>
+			*/
+			?>
+			<div id="notice" class="updated below-h2"><p><?php _e( 'The following are some extensions you can purchase to extend Recipe Hero in awesome and exciting ways!', 'recipe-hero' ); ?></p></div>
 			<?php echo $extensions; ?>
 		</div>
 		<?php

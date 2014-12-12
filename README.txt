@@ -4,7 +4,7 @@ Donate link: http://recipehero.in/
 Tags: recipe, recipes, cooking, ingredients, food, cook, cook book, recipe hero, captain theme, google recipes
 Requires at least: 3.8.0
 Tested up to: 4.1.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -133,7 +133,13 @@ Sure, but on food-steroids. Just check out the screenshots area.
 == Changelog ==
 
 = 1.0.2 =
-* Bug Fix: Servings Type setting field made a bit bigger
+* New: Recipe Reviews / Ratings
+* New: Rating schema.org markup
+* Bug Fix: 'Servings type' setting field made a bit bigger
+* Bug Fix: Ingredients list style fixes
+* Bug Fix: Template Engine improvements
+* Bug Fix: Extension Page Styling
+* Bug Fix: Shortcode style / comment fixes
 * i18n: Couple translation fixes and .pot files used now
 
 = 1.0.1 =
