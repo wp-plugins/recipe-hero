@@ -4,7 +4,7 @@ Donate link: http://recipehero.in/
 Tags: recipe, recipes, cooking, ingredients, food, cook, cook book, recipe hero, captain theme, google recipes
 Requires at least: 3.8.0
 Tested up to: 4.1.0
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,7 @@ Navigate to `http://yourwebsite.com/recipes` to see all the new recipes you've a
 > Just incase you're looking to get a little bit more out of Recipe Hero, there are a several extensions available, both free and premium:<br />
 >
 > - [Recipe Hero Labels](https://wordpress.org/plugins/recipe-hero-labels/)<br />
+> - [Recipe Hero Print](http://recipehero.in/extensions/print/)<br />
 > - [Recipe Hero Video](http://recipehero.in/extensions/video/)<br />
 > - [Recipe Hero Likes](http://recipehero.in/extensions/likes/)<br />
 > - [Recipe Hero Submit](http://recipehero.in/extensions/submit/)<br />
@@ -133,6 +134,16 @@ Sure, but on food-steroids. Just check out the screenshots area.
 
 == Changelog ==
 
+= 1.0.5 =
+* Bug Fix: Add lightbox gallery class to featured image regardless of gallery
+* Bug Fix: Storefront compatible styles
+* Bug Fix: Twenty Fifteen (2015) compatible styles
+* Template Change: single/photo.php
+* Template Change: global/wrapper-start.php
+* Template Change: global/wrapper-end.php
+* Template Change: single-recipe-reviews.php
+* RH: Notice that shows after a while asking you to maybe review the plugin - please do! :)
+
 = 1.0.4 =
 * Bug Fix: Fix 404s & other errors due to custom queries
 
@@ -140,7 +151,7 @@ Sure, but on food-steroids. Just check out the screenshots area.
 * Bug Fix: Reviews link / summary on archives
 * Bug Fix: Include recipe_hero_enable_review_rating option in uninstall.php
 * Bug Fix: RH_Query class missing a public var - added it!
-* Buf Fix: Ingredients undefined index error
+* Bug Fix: Ingredients undefined index error
 * Template Change: single/ingredients.php
 * Template Change: review.php / rating.php / single-recipe-reviews.php
 
