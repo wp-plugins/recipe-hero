@@ -1,4 +1,4 @@
-@import 'rh-mixins';
+@import 'sass/mixins';
 
 $primary:           #a46497;                                    // Primary colour for buttons (alt)
 $primarytext:       desaturate(lighten($primary, 50%), 18%);    // Text on primary colour bg
@@ -48,6 +48,20 @@ Specific Core Theme Styles
 	.recipe-single-meta,
 	.recipe-archive-meta {
 		margin-bottom: 15px;
+	}
+}
+
+// Point Theme
+.theme-point.recipe-hero {
+	#primary {
+		margin-left: 22px;
+		>.article {
+			margin-top: 15px;
+		}
+	}
+	aside.sidebar {
+		margin-top: 23px;
+		margin-right: 20px;
 	}
 }
 
@@ -114,6 +128,9 @@ nav.recipe-hero-pagination {
 .recipe-hero {
 	article.recipe {
 		line-height: 1.4;
+		.entry-header {
+			margin-bottom: 1.8em;
+		}
 		h4 {
 			font-size: 23px;
 			margin-bottom: 18px;
@@ -156,25 +173,31 @@ nav.recipe-hero-pagination {
 		}
 		.images {
 			margin-bottom: 10px;
+			.recipe-hero-main-image {
+				img {
+					display: inline-block;
+					margin-bottom: 0;
+				}
+			}
 			.thumbnails {
 				margin-top: 5px;
 				@include clearfix();
 				a {
 					float:left;
 					&.columns-3 {
-						width: 30.75%;
+						width: 30.80%;
 						margin-right: 3.8%;
 					}
 					&.columns-4 {
-						width: 22.85%;
+						width: 23.05%;
 						margin-right: 2.55%;
 					}
 					&.columns-5 {
-						width: 17.45%;
+						width: 18.24%;
 						margin-right: 2.2%;
 					}
 					&.columns-6 {
-						width: 14.2%;
+						width: 14.33%;
 						margin-right: 2.8%;
 					}
 					img {
@@ -313,13 +336,11 @@ nav.recipe-hero-pagination {
 						min-width: 20%;
 						display: inline-block;
 						font-weight: bold;
-						vertical-align: top;
 					}
 					.name {
 						text-align: left;
 						display: inline-block;
 						padding-left: 5px;
-						vertical-align: top;
 					}
 				}
 			}
